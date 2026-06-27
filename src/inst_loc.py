@@ -27,7 +27,7 @@ def instant():
     client = genai.Client(api_key=GEMINI_API_KEY)
     # messages = [{"role": "user", "content": user_message}]
     # chat = client.chats.create(model="gemini-2.5-flash")
-    chat = client.chats.create(model="gemini-2.5-flash-lite")
+    chat = client.chats.create(model="gemini-2.5-flash")
     response = chat.send_message(user_message)
     reply = response.text.replace("\n", "<br/>")
 
